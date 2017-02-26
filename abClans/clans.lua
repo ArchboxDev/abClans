@@ -2,7 +2,19 @@
 
 local Clans = {}
 
-local Clans.Clans = Storage.Create()
+Clans.Clans = Storage.Create()
+
+function Clans.GetPlayerClan( Player )
+	local Res = nil
+	for i, Clan in pairs( Clans.Clans ) do
+		if Clan:PlayerIsMember( Player ) then
+			Res = Clan
+		end
+	end
+	return Res
+end
+
+-- abClans: Classes --
 
 local ClanMeta = {}
 function Clans.NewClan( Owner, Name )
@@ -44,6 +56,16 @@ function Clans.NewClan( Owner, Name )
 		else
 			return Clans.NewRelation( this, Clan )
 		end
+	end
+	
+	function this:PlayerIsMember( Player )
+		local Res = false
+		for i, Member in pairs( this.Members ) do
+			if Member.ID == Player:SteamID64() then
+				Res = true
+			end
+		end
+		return Res
 	end
 	
 	Clans.Clans:SetItem( Name, this )

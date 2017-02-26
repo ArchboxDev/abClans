@@ -39,6 +39,7 @@ function ClanMenuDermaBase()
 	body:MakePopup()
 
 	body.Paint = function( self, w, h )
+		draw.RoundedBox( 0, 0, 0, w, h, Color( 255, 255, 255 ) ) -- fuck you
 		draw.RoundedBox( 0, 0, 0, w, h, Color( 0, 0, 0, 210 ) )
 	end
 
@@ -57,8 +58,8 @@ function ClanMenuDermaBase()
 	sel:MakePopup()
 
 	sel.Paint = function( self, w, h )
+		draw.RoundedBox( 0, 0, 0, w, h, Color( 255, 255, 255 ) ) -- fuck you
 		draw.RoundedBox( 0, 0, 0, w, h, Color( 0, 0, 0, 210 ) )
-		print( self.Color )
 	end
 
 	-- Selection: Buttons --
@@ -178,3 +179,5 @@ end
 -- Debugging lol --
 
 ClanMenuDermaBase()
+
+-- https://this.is-a.dog/2cb600.png --
