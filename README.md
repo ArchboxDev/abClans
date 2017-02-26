@@ -1,6 +1,9 @@
 # abClans
 Clans addon for Garry's Mod or whatever.
 
+This is still a work in progress. It isn't complete.<br/>
+Don't expect it to work.
+
 ```
     Copyright (C) 2017 Bubbie
 
