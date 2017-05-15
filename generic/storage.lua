@@ -1,7 +1,6 @@
 --[[
 	Copyright (C) 2017 Bubbie
 	do whatever the fuck you want with this I don't really give a shit
-	https://github.com/bubbie/LuaStorage/
 ]]--
 
 Storage = {}
